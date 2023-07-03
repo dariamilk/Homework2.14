@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6662890-989c-4c76-8494-f1a3940c3afa" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/NoElementAtSuchIndexException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/NoSuchItemException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/StringList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/StringListImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pro/sky/StringListImplTest.java" afterDir="false" />
+    <list default="true" id="e6662890-989c-4c76-8494-f1a3940c3afa" name="Changes" comment="hw-2.14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pro/sky/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/sky/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pro/sky/StringList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/sky/IntegerList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pro/sky/StringListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/sky/IntegerListImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pro/sky/StringListImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pro/sky/IntegerListImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +57,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/dariachulpanova/IdeaProjects/homework2.15",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,8 +77,21 @@
       <recent name="pro.sky" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StringListImplTest">
-    <configuration name="StringListImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.IntegerListImplTest.contains">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pro.sky.Main" />
+      <module name="homework2.14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegerListImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework2.14" />
       <extension name="coverage">
         <pattern>
@@ -89,13 +100,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pro.sky" />
-      <option name="MAIN_CLASS_NAME" value="pro.sky.StringListImplTest" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.IntegerListImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringListImplTest.clear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegerListImplTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework2.14" />
       <extension name="coverage">
         <pattern>
@@ -104,14 +115,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pro.sky" />
-      <option name="MAIN_CLASS_NAME" value="pro.sky.StringListImplTest" />
-      <option name="METHOD_NAME" value="clear" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.IntegerListImplTest" />
+      <option name="METHOD_NAME" value="add" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringListImplTest.isEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegerListImplTest.contains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework2.14" />
       <extension name="coverage">
         <pattern>
@@ -120,14 +131,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pro.sky" />
-      <option name="MAIN_CLASS_NAME" value="pro.sky.StringListImplTest" />
-      <option name="METHOD_NAME" value="isEmpty" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.IntegerListImplTest" />
+      <option name="METHOD_NAME" value="contains" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringListImplTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegerListImplTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework2.14" />
       <extension name="coverage">
         <pattern>
@@ -136,24 +147,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pro.sky" />
-      <option name="MAIN_CLASS_NAME" value="pro.sky.StringListImplTest" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.IntegerListImplTest" />
       <option name="METHOD_NAME" value="testEquals" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StringListImplTest.toArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework2.14" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pro.sky.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pro.sky" />
-      <option name="MAIN_CLASS_NAME" value="pro.sky.StringListImplTest" />
-      <option name="METHOD_NAME" value="toArray" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StringListImplTest" />
-        <item itemvalue="JUnit.StringListImplTest.testEquals" />
-        <item itemvalue="JUnit.StringListImplTest.toArray" />
-        <item itemvalue="JUnit.StringListImplTest.clear" />
-        <item itemvalue="JUnit.StringListImplTest.isEmpty" />
+        <item itemvalue="JUnit.IntegerListImplTest.contains" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.IntegerListImplTest" />
+        <item itemvalue="JUnit.IntegerListImplTest.add" />
+        <item itemvalue="JUnit.IntegerListImplTest.testEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +172,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688276736508</updated>
-      <workItem from="1688276737629" duration="19208000" />
+      <workItem from="1688276737629" duration="19673000" />
+      <workItem from="1688417298721" duration="4110000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1688277132906</created>
@@ -186,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688277132906</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hw-2.14">
+      <created>1688301020252</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688301020252</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +197,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="hw-2.14" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw-2.14" />
   </component>
 </project>

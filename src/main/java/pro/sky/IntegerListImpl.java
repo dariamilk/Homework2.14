@@ -18,11 +18,7 @@ public class IntegerListImpl implements IntegerList {
         if (size < integerList.length) {
             integerList[size] = item;
         } else {
-            Integer[] oldIntegerArray = integerList;
-            Integer[] integerList = new Integer[oldIntegerArray.length + 10];
-            for (int j = 0; j < oldIntegerArray.length; j++) {
-                    integerList[j] = oldIntegerArray[j];
-                }
+            grow();
             integerList[size] = item;
         }
         size++;
@@ -100,7 +96,7 @@ public class IntegerListImpl implements IntegerList {
     @Override
     public boolean contains(Integer item) {
             Integer[] integerListCopy = this.toArray();
-            return binarySearch(sortSelection(integerListCopy), item);
+            return binarySearch(mergeSort(integerListCopy), item);
     }
 
     @Override
@@ -178,23 +174,55 @@ public class IntegerListImpl implements IntegerList {
         }
         return false;
     }
-    private static Integer[] sortSelection(Integer[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            int minElementIndex = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[minElementIndex]) {
-                    minElementIndex = j;
-                }
-            }
-            swapElements(arr, i, minElementIndex);
+    private static Integer[] mergeSort(Integer[] arr) {
+        if (arr.length < 2) {
+            return arr;
         }
+        Integer mid = arr.length / 2;
+        Integer[] left = new Integer[mid];
+        Integer[] right = new Integer[arr.length - mid];
+
+        for (int i = 0; i < left.length; i++) {
+            left[i] = arr[i];
+        }
+
+        for (int i = 0; i < right.length; i++) {
+            right[i] = arr[mid + i];
+        }
+
+        mergeSort(left);
+        mergeSort(right);
+
+        merge(arr, left, right);
         return arr;
     }
-    private static void swapElements(Integer[] arr, Integer indexA, Integer indexB) {
-        Integer tmp = arr[indexA];
-        arr[indexA] = arr[indexB];
-        arr[indexB] = tmp;
+    public static void merge(Integer[] arr, Integer[] left, Integer[] right) {
+
+        int mainP = 0;
+        int leftP = 0;
+        int rightP = 0;
+        while (leftP < left.length && rightP < right.length) {
+            if (left[leftP] <= right[rightP]) {
+                arr[mainP++] = left[leftP++];
+            } else {
+                arr[mainP++] = right[rightP++];
+            }
+        }
+        while (leftP < left.length) {
+            arr[mainP++] = left[leftP++];
+        }
+        while (rightP < right.length) {
+            arr[mainP++] = right[rightP++];
+        }
     }
+    private void grow () {
+        Integer[] oldIntegerArray = integerList;
+        Integer[] integerList = new Integer[(oldIntegerArray.length * 2)/2];
+        for (int j = 0; j < oldIntegerArray.length; j++) {
+            integerList[j] = oldIntegerArray[j];
+        }
+    }
+
     @Override
     public String toString() {
         return "StringList=" + Arrays.toString(integerList);
